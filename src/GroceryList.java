@@ -22,7 +22,7 @@ public class GroceryList {
 
     public void modifyGroceryList(int position, String newitem) {
         this.groceryList.set(position, newitem);
-        System.out.println("Grocery item " + (position + 1) + "has been modified");
+        System.out.println("Grocery item " + (position + 1) + "has been modified funca");
     }
 
     public void removeGroceryItem(int position) {

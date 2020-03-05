@@ -13,7 +13,7 @@ public class Main {
         printInstructions();
 
         while(!quit) {
-            System.out.println("Enter ur choice");
+            System.out.println("Enter your choice");
             int choice2 = scan.nextInt();
             scan.nextLine();
             switch(choice2) {
@@ -45,7 +45,7 @@ public class Main {
     public static void printInstructions() {
         System.out.println("\nPress");
         System.out.println("\t 0 - To print choise options");
-        System.out.println("\t 1 - To print the list of Grpcery Items");
+        System.out.println("\t 1 - To print the list of Grocery Items");
         System.out.println("\t 2 - To add an item to the list");
         System.out.println("\t 3 - to Modify an item in the list ");
         System.out.println("\t 4 - To remove an item from the list");
