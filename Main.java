@@ -12,25 +12,25 @@ public class Main {
         int choice;
         printInstructions();
 
-        while(!quit) {
+        while (!quit) {
             System.out.println("Enter your choice");
             int choice2 = scan.nextInt();
             scan.nextLine();
-            switch(choice2) {
+            switch (choice2) {
                 case 0:
                     printInstructions();
                     break;
                 case 1:
-                    groceryLista.printGroceryList();
-                    break;
-                case 2:
                     addItem();
                     break;
-                case 3:
+                case 2:
                     modifyItem();
                     break;
-                case 4:
+                case 3:
                     removeItem();
+                    break;
+                case 4:
+                    groceryLista.printGroceryList();
                     break;
                 case 5:
                     searchForItem();
@@ -45,10 +45,10 @@ public class Main {
     public static void printInstructions() {
         System.out.println("\nPress");
         System.out.println("\t 0 - To print choise options");
-        System.out.println("\t 1 - To print the list of Grocery Items");
-        System.out.println("\t 2 - To add an item to the list");
-        System.out.println("\t 3 - to Modify an item in the list ");
-        System.out.println("\t 4 - To remove an item from the list");
+        System.out.println("\t 1 - To add an item to the list ");
+        System.out.println("\t 2 - to Modify an item in the list");
+        System.out.println("\t 3 - To remove an item from the list ");
+        System.out.println("\t 4 - To print the list of Grocery Items");
         System.out.println("\t 5 - To search for an item in the list");
         System.out.println("\t 6 - To quit the application.");
     }
@@ -68,19 +68,19 @@ public class Main {
     }
 
     public static void removeItem() {
-        System.out.println("Enter item number");
+        System.out.println("Enter item number \n");
         int itemNo = scan.nextInt();
         scan.nextLine();
-        groceryLista.removeGroceryItem(itemNo - 1);
+        groceryLista.removeGroceryItem(itemNo -1);
     }
 
     public static void searchForItem() {
         System.out.println("Enter item to search for: ");
         String searchItem = scan.nextLine();
         if (groceryLista.findItem(searchItem) != null) {
-            System.out.println("Found " + searchItem + "in our grocery");
+            System.out.println("Found " + searchItem + " in our grocery");
         } else {
-            System.out.println(searchItem + "is not in the shopping list");
+            System.out.println(searchItem + " is not in the shopping list");
         }
 
     }

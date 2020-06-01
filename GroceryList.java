@@ -12,8 +12,9 @@ public class GroceryList {
     }
 
     public void printGroceryList() {
-        System.out.println("you have " + this.groceryList.size());
-
+        if (groceryList.size()==0){
+            System.out.println("Your list is empty\n");
+        }
         for(int i = 0; i < this.groceryList.size(); ++i) {
             System.out.println(i + 1 + " . " + this.groceryList.get(i));
         }
@@ -26,7 +27,7 @@ public class GroceryList {
     }
 
     public void removeGroceryItem(int position) {
-        String theItem = this.groceryList.get(position - 1);
+        String theItem = this.groceryList.get(position);
         this.groceryList.remove(position);
     }
 
